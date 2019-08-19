@@ -17,7 +17,12 @@ class SchoolListView(ListView):
     context_object_name = 'schools'
     model = School
 
-class SchoolDetailView(DetailView):
-    context_object_name = 'school_details'
-    model = School
-    template_name = 'basic_app/school_details.html'
+def SchoolDetailView(request, school_id):
+    pk=school_id
+    school=School.objects.filter(id=pk).get()
+    return render(request,'basic_app/school_details.html',{'school_details':school})
+
+#class SchoolDetailView(DetailView,pk):
+#    context_object_name = 'school_details'
+#    model = School
+#    template_name = 'basic_app/school_details.html'
