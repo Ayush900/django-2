@@ -1,0 +1,11 @@
+def check(str):
+    print(str[::2])
+str1='hello'
+print('If the string is:',str1)
+check(str1)
+str2='hi'
+print('If the string is:', str2)
+check(str2)
+str3='ayush'
+print('If the string is:', str3)
+check(str3)

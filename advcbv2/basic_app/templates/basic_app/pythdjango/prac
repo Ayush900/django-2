@@ -1,0 +1,32 @@
+n = int(input('Enter the number to be guessed:'))
+from random import randint
+g=0
+i=0
+guess = randint(0,100)
+print('The guess is {}'.format(guess))
+if guess < 1 or guess > 100:
+    print('out of bounds...')
+if abs(n-10) < guess and guess < abs(n+10):
+    print('WARM!\n')
+else:
+    print('cold!\n')
+while(guess!=n):
+    guess = randint(0,100)
+
+    print('The guess is {}'.format(guess))
+    i=i+1
+    if guess == n:
+        break
+    if guess<1 or guess >100:
+        print('out of bounds...')
+        continue
+    if abs(n-10)<guess and guess<abs(n+10):
+        print('WARM!\n')
+    else:
+        print('cold!\n')
+    if abs(guess-n) < abs(g-n):
+        print('warmer!')
+    else:
+        print('colder!')
+    g=guess
+print('The number is guessed right after {} turns'.format(i+1))

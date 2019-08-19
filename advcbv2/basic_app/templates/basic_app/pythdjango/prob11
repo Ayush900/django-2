@@ -1,0 +1,39 @@
+def check(s1,s2):
+    if len(s1)>len(s2):
+        for i in range(len(s1)):
+            k=0
+            for j in range(len(s2)):
+                if s1[i].lower() == s2[j].lower() or s1[i].lower() == s2[j].upper() or s1[i].upper() == s2[j].lower():
+                    k = k + 1
+                else:
+                    break
+        if k == len(s2):
+            return print('true')
+        else:
+            return print("false")
+    else:
+        for item in range(len(s2)):
+            for l in range(len(s1)):
+                p=0
+                if s2[item].lower() == s1[l].lower() or s2[item].lower() == s1[l].upper() or s2[item].upper() == s1[l].lower():
+                    p=p+1
+                else:
+                    break
+        if p == len(s1):
+            return print('true')
+        else:
+            return print("false")
+
+
+st1='Hiabc'
+st2='abc'
+print("The given comb of strings are:{} and {}".format(st1,st2))
+check(st1,st2)
+str1='AbC'
+str2='HiaBc'
+print("The given comb of strings are:{} and {}".format(str1,str2))
+check(str1,str2)
+stri1='abc'
+stri2='abXabc'
+print("The given comb of strings are:{} and {}".format(stri1,stri2))
+check(stri1,stri2)

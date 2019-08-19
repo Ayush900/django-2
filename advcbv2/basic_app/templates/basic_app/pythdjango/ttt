@@ -1,0 +1,123 @@
+print("The rules of the game are simple,there are two players playing at a time ,player1 and player2.\nPlayer1 has been alloted the symbol 'X' whereas player 2 has been alloted the symbol 'O'.\nEach player will get a chance alternatly and the game continues until any one of the competetor gets his symbols arranged in the row ,column or diagonal....")
+print("for placement in 1st row 1st column choose n as:1")
+print("for placement in 1st row 2nd column choose n as:2")
+print("for placement in 1st row 3rd column choose n as:3")
+print("for placement in 2nd row 1st column choose n as:4")
+print("for placement in 2nd row 2nd column choose n as:5")
+print("for placement in 2nd row 3rd column choose n as:6")
+print("for placement in 3rd row 1st column choose n as:7")
+print("for placement in 3rd row 2nd column choose n as:8")
+print("for placement in 3rd row 3rd column choose n as:9")
+def board(r1,r2,r3):    # The entry points are r1[0],r1[2],r1[4],r2[0],r2[2],r2[4],r3[0],r3[2],r3[4]
+    r = ['------------']
+    print('{} {} {} {} {}'.format(r1[0],r1[1],r1[2],r1[3],r1[4]))
+    print(r[0])
+    print('{} {} {} {} {}'.format(r2[0],r2[1],r2[2],r2[3],r2[4]))
+    print(r[0])
+    print('{} {} {} {} {}'.format(r3[0],r3[1],r3[2],r3[3],r3[4]))
+    print(r[0])
+ro1 = [' ', '||', ' ', '||', ' ']
+ro2 = [' ', '||', ' ', '||', ' ']
+ro3 = [' ', '||', ' ', '||', ' ']
+while True:
+
+    print("It's player 1 's chance:\n")
+    n = int(input("Enter your choice of input:"))
+    if n==1:
+        ro1[0] = 'X'
+    elif n == 2:
+        ro1[2] = 'X'
+    elif n == 3:
+        ro1[4] = 'X'
+    elif n == 4:
+        ro2[0] = 'X'
+    elif n == 5:
+        ro2[2] = 'X'
+    elif n == 6:
+        ro2[4] = 'X'
+
+    elif n == 7:
+        ro3[0] = 'X'
+    elif n == 8:
+        ro3[2] = 'X'
+    elif n == 9:
+        ro3[4] = 'X'
+    board(ro1,ro2,ro3)
+    if (ro1[0] == 'X' and ro1[2] == 'X' and ro1[4] == 'X'):
+        print("The game has ended and player 1 is the winner!!")
+        break
+    elif (ro2[0] == 'X' and ro2[2] == 'X' and ro2[4] == 'X'):
+        print("The game has ended and player 1 is the winner!!")
+        break
+    elif (ro3[0] == 'X' and ro3[2] == 'X' and ro3[4] == 'X'):
+        print("The game has ended and player 1 is the winner!!")
+        break
+    elif (ro1[0] == 'X' and ro2[0] == 'X' and ro3[0] == 'X'):
+        print("The game has ended and player 1 is the winner!!")
+        break
+    elif (ro1[2] == 'X' and ro2[2] == 'X' and ro3[2] == 'X'):
+        print("The game has ended and player 1 is the winner!!")
+        break
+    elif (ro1[4] == 'X' and ro2[4] == 'X' and ro3[4] == 'X'):
+        print("The game has ended and player 1 is the winner!!")
+        break
+    elif (ro1[0] == 'X' and ro2[2] == 'X' and ro3[4] == 'X'):
+        print("The game has ended and player 1 is the winner!!")
+        break
+    elif (ro1[4] == 'X' and ro2[2] == 'X' and ro3[0] == 'X'):
+        print("The game has ended and player 1 is the winner!!")
+        break
+    print("It's player 2's chance:\n")
+    n1 = int(input("Enter your choice of input:"))
+    if n1 == 1:
+        ro1[0] = 'O'
+    elif n1 == 2:
+        ro1[2] = 'O'
+    elif n1 == 3:
+        ro1[4] = 'O'
+    elif n1 == 4:
+        ro2[0] = 'O'
+    elif n1 == 5:
+        ro2[2] = 'O'
+    elif n1 == 6:
+        ro2[4] = 'O'
+
+    elif n1 == 7:
+        ro3[0] = 'O'
+    elif n1 == 8:
+        ro3[2] = 'O'
+    elif n1 == 9:
+        ro3[4] = 'O'
+    board(ro1, ro2, ro3)
+    if (ro1[0] == 'O' and ro1[2] == 'O' and ro1[4] == 'O'):
+        print("The game has ended and player 2 is the winner!!")
+        break
+    elif (ro2[0] == 'O' and ro2[2] == 'O' and ro2[4] == 'O'):
+        print("The game has ended and player 2 is the winner!!")
+        break
+    elif (ro3[0] == 'O' and ro3[2] == 'O' and ro3[4] == 'O'):
+        print("The game has ended and player 2 is the winner!!")
+        break
+    elif (ro1[0] == 'O' and ro2[0] == 'O' and ro3[0] == 'O'):
+        print("The game has ended and player 2 is the winner!!")
+        break
+    elif (ro1[2] == 'O' and ro2[2] == 'O' and ro3[2] == 'O'):
+        print("The game has ended and player 2 is the winner!!")
+        break
+    elif (ro1[4] == 'O' and ro2[4] == 'O' and ro3[4] == 'O'):
+        print("The game has ended and player 2 is the winner!!")
+        break
+    elif (ro1[0] == 'O' and ro2[2] == 'O' and ro3[4] == 'O'):
+        print("The game has ended and player 2 is the winner!!")
+        break
+    elif (ro1[4] == 'O' and ro2[2] == 'O' and ro3[0] == 'O'):
+        print("The game has ended and player 2 is the winner!!")
+        break
+
+
+
+
+
+
+
+

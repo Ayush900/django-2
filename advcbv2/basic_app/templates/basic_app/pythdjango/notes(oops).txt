@@ -1,0 +1,43 @@
+?OBJECTS OR CLASSES:
+
+We can define the classes in python which are also known as objects to perform a particular task assigned to them . We can declare a certain number of classes or objects and
+their attributes which gives us the desired result according to the methods which we can define in the classes...
+This type of programming involving the creation of new objects or classes is known as object oriented programing or OOPS....
+
+
+ATTRIBUTES OF CLASSES:
+
+
+Attributes are defined as the required parameters which help us define a given class....
+
+
+METHODS OF CLASSES:
+
+
+Methos can be defined as the procedures or the process fllowed under a given defined class which help us give the desired result....
+
+
+INHERITANCE:
+
+
+Inheritance is the method of deriving or inheriting a new class or new object from an old class or object.The new object derived or created is called derived class and the object 
+or the class derived from is caleed the base class.The derived class may contain the methods and the attribues of the base class....
+
+
+SPECIAL METHODS:
+
+
+There are various special methods which are used in classes or objects which are like inbuilt methods and are very helpful in providing a desired result....
+
+
+1.__str__
+
+This special method gives the string representation of a given class and will be used quite often...
+
+2.__len__
+
+This special method can be used to give the length of the given class or object...
+
+3.__del__
+
+This special method can be used to delete a given class created before....

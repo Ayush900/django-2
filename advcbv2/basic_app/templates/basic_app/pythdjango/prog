@@ -1,0 +1,3 @@
+from module import division
+print(division(a=30,b=20))
+print(type(division(a=30,b=20)))

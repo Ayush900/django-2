@@ -1,0 +1,46 @@
+class account():
+    def __init__(self,owner,balance):
+        self.owner = owner
+        self.balance = balance
+    def withdarwl(self,amt):
+
+        self.amt = amt
+        if self.amt>self.balance:
+            return "Insufficient funds!!"
+        else:
+            self.balance = self.balance - self.amt
+            return "The balance after withdrawl of {} is:{}".format(self.amt,self.balance)
+
+    def entry(self,amt):
+
+        self.amt =amt
+        self.balance = self.balance + self.amt
+        return "The balance after the entry of {} is:{}".format(self.amt,self.balance)
+
+    def ___str__(self):
+        return "The owner of the account is {} and the current balance in the account is {}".format(self.owner,self.balance))
+own = input("Enter the name of the owner of the account...")
+b = int(input("Enter the initial balance in the account:"))
+acc1 = account(own,b)
+while True:
+    n = int(input("Do you wish to make a transaction?\n1:yes\n2:no\n"))
+    if n == 1:
+        n1 = int (input("Enter your choice:\n1:withdrawl\n2:credit\n" ))
+        if n1 ==1:
+            a = int (input("Enter the amount to be withdrawn:"))
+            print(acc1.withdarwl(a))
+        elif n1 ==2:
+
+            a = int (input("Enter the amount to be credited:"))
+            print(acc1.entry(a))
+
+        else:
+            print("Invalid response!!")
+    elif n ==2:
+        print(acc1)
+        break
+    else:
+        print("Invalid response!!")
+
+
+
